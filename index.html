@@ -119,7 +119,13 @@
   footer { border-top: 1px solid var(--line); padding: 28px 0 48px; color: var(--muted); font-size: .85rem; text-align: center; }
   @media (max-width: 560px) {
     .hero { padding: 48px 0 40px; }
-    .pricing th:nth-child(3), .pricing td:nth-child(3) { display: none; }
+    .pricing tr:first-child { display: none; }
+    .pricing, .pricing tbody, .pricing tr, .pricing td { display: block; width: 100%; }
+    .pricing tr { padding: 14px 16px; border-bottom: 1px solid var(--line); }
+    .pricing td { padding: 2px 0; border-bottom: none; }
+    .pricing td:first-child { font-weight: 700; font-size: 1.05rem; }
+    .pricing td.price { padding-bottom: 6px; }
+    .pricing td:nth-child(3) { color: var(--muted); font-size: .92rem; }
   }
 </style>
 </head>
@@ -203,7 +209,7 @@
     <tr>
       <td data-en="Complete Package" data-zh="全包">Complete Package</td>
       <td class="price">SGD 780–1,280</td>
-      <td data-en="Everything above, plus a one-page website built for humans and AI" data-zh="以上全部 + 一页式官网（人和 AI 都读得懂）">Everything above, plus a one-page website built for humans and AI</td>
+      <td data-en="Everything above, plus a one-page website we design and build for you — menu, opening hours, map and WhatsApp button, beautiful on every phone, fully readable by AI, free hosting, two revision rounds included" data-zh="以上全部 + 为你设计并建好的一页式官网——菜单、营业时间、地图、WhatsApp 按钮，手机上好看、AI 读得懂、免费托管、含两轮修改">Everything above, plus a one-page website we design and build for you — menu, opening hours, map and WhatsApp button, beautiful on every phone, fully readable by AI, free hosting, two revision rounds included</td>
     </tr>
   </table>
   <p class="note" data-en="Every paid tier includes a before-and-after re-test 30–60 days later." data-zh="所有付费档都含 30–60 天后的前后对比重测。">Every paid tier includes a before-and-after re-test 30–60 days later.</p>
