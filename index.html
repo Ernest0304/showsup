@@ -6,7 +6,7 @@
 <title>showsup — When customers ask AI, you show up</title>
 <link rel="canonical" href="https://showsup.sg/">
 <script>try{if(localStorage.getItem('showsup-lang')==='zh')document.documentElement.lang='zh'}catch(e){}</script>
-<meta name="description" content="AI visibility for local businesses in Singapore, starting with F&B. We check how ChatGPT, Perplexity and Google AI describe your business, fix what they read, and prove it with a re-test. Free 2-page AI check.">
+<meta name="description" content="showsup is a small Singapore studio for local businesses: we manage how ChatGPT, Perplexity and Google AI describe your shop, build or refresh your website, and make custom time-saving tools. Free AI check first.">
 <meta property="og:title" content="showsup — When customers ask AI, you show up">
 <meta property="og:description" content="Customers now ask AI where to eat, shop, and book. We make sure the answer includes you — and gets your details right. Free 2-page AI check.">
 <meta property="og:type" content="website">
@@ -83,6 +83,14 @@
     },
     {
       "@type": "Question",
+      "name": "My website is on Shopify / Wix. Is this still useful for me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — keep your site, we don't touch it. AI assistants mostly read things outside your website: your Google Business Profile, maps, review sites and platform listings. That's the layer we check, fix and maintain. We only build websites for businesses that have none, or one that's badly outdated."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "How do I pay?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -122,6 +130,11 @@
   .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; }
   .logo .up { color: var(--accent); display: inline-block; transition: transform .2s; }
   .logo:hover .up { transform: translateY(-3px); }
+  .nav-links { display: flex; gap: 20px; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: .95rem; padding: 10px 2px; }
+  .nav-links a:hover { color: var(--ink); }
+  @media (max-width: 719px) { .nav-links { display: none; } }
+  .pillars .pillar { border-width: 2px; border-color: #d9d2c6; }
   .lang-toggle { border: 1px solid var(--line); border-radius: 999px; overflow: hidden; display: flex; background: var(--card); }
   .lang-toggle button { border: none; background: none; padding: 11px 16px; font-size: .9rem; cursor: pointer; color: var(--muted); }
   .lang-toggle button.active { background: var(--ink); color: #fff; }
@@ -199,6 +212,12 @@
 
 <nav>
   <div class="logo">shows<span class="up">up</span></div>
+  <div class="nav-links">
+    <a href="#services" data-en="Services" data-zh="服务">Services</a>
+    <a href="#work" data-en="Work" data-zh="作品">Work</a>
+    <a href="#pricing" data-en="Pricing" data-zh="价格">Pricing</a>
+    <a href="#free-check" data-en="Free check" data-zh="免费检查">Free check</a>
+  </div>
   <div class="lang-toggle">
     <button id="lang-en" class="active" type="button">EN</button>
     <button id="lang-zh" type="button">中文</button>
@@ -208,9 +227,9 @@
 <header class="hero">
   <h1><span data-en="When customers ask AI, " data-zh="顾客问 AI 的时候，">When customers ask AI, </span><span class="hl" data-en="you show up." data-zh="答案里要有你。">you show up.</span></h1><!--
   -->
-  <p data-en="Customers now ask ChatGPT and Google AI where to eat, shop, and book. We make sure the answer includes you — and gets your details right. AI visibility for local businesses in Singapore, starting with F&B."
-     data-zh="顾客现在直接问 ChatGPT 和 Google AI 去哪吃、去哪买、去哪订。我们确保答案里有你，而且信息是对的。新加坡本地生意的 AI 可见度工作室，从餐饮起步。">Customers now ask ChatGPT and Google AI where to eat, shop, and book. We make sure the answer includes you — and gets your details right. AI visibility for local businesses in Singapore, starting with F&B.</p>
-  <a class="cta" href="#free-check" data-en="Get your free AI check" data-zh="领取免费 AI 体检">Get your free AI check</a>
+  <p data-en="showsup is a small Singapore studio. We do two things for local businesses: manage how AI and Google describe your shop, and build or refresh your website. We also build custom tools that save you time. Starting with F&B. Free check first — you decide after."
+     data-zh="showsup 是新加坡的一家小工作室，帮本地商家做两件事：管好 ChatGPT 和 Google 怎么讲你的店，以及帮你建网站、翻新旧网站。也接定制小工具。从餐饮开始，先送免费检查，看完再决定。">showsup is a small Singapore studio. We do two things for local businesses: manage how AI and Google describe your shop, and build or refresh your website. We also build custom tools that save you time. Starting with F&B. Free check first — you decide after.</p>
+  <a class="cta" href="#free-check" data-en="Get your free AI check" data-zh="领取免费 AI 检查">Get your free AI check</a>
 </header>
 
 <section>
@@ -228,57 +247,29 @@
      data-zh="一家新加坡精品咖啡馆 2025 年搬到了 CBD。一年后，AI 还在把顾客送去已经关门的旧店——连营业时间都是旧的。没有人告诉店主，因为没有人会去查。">A Singapore specialty cafe moved to the CBD in 2025. A year later, AI assistants still send customers to its closed outlet — with the old opening hours. Nobody had told the owner, because nobody checks.</p>
 </section>
 
-<section>
-  <h2 data-en="What we do" data-zh="我们做什么">What we do</h2>
-  <div class="cards">
-    <div class="card">
-      <div class="k">check</div>
-      <h3 data-en="Audit" data-zh="查">Audit</h3>
-      <p data-en="We ask three AI assistants the questions your customers ask, and document exactly what comes back — with screenshots." data-zh="用顾客真实会问的问题实测三大 AI，逐条截图记录它们怎么说你的店。">We ask three AI assistants the questions your customers ask, and document exactly what comes back — with screenshots.</p>
+<section id="services">
+  <h2 data-en="Two things we do" data-zh="两大主业务">Two things we do</h2>
+  <div class="cards pillars">
+    <div class="card pillar">
+      <div class="k">business 1</div>
+      <h3 data-en="AI &amp; Google visibility" data-zh="AI 和 Google 怎么讲你的店">AI &amp; Google visibility</h3>
+      <p data-en="We test what ChatGPT, Google AI and Perplexity actually say about your shop, fix every listing they read — Google Business Profile, maps, platforms, menus — and keep it correct month after month. Works with any website, including Shopify and Wix." data-zh="实测 ChatGPT、Google AI、Perplexity 现在怎么讲你的店，把它们读的资料全部修对——Google 商家档案、地图、各平台、菜单——然后每个月帮你盯着。不管你的网站是 Shopify 还是谁建的，都用得上。">We test what ChatGPT, Google AI and Perplexity actually say about your shop, fix every listing they read — Google Business Profile, maps, platforms, menus — and keep it correct month after month. Works with any website, including Shopify and Wix.</p>
+      <a class="demo-link" href="#pricing" data-en="See pricing →" data-zh="看价格 →">See pricing →</a>
     </div>
-    <div class="card">
-      <div class="k">fix</div>
-      <h3 data-en="Fix" data-zh="修">Fix</h3>
-      <p data-en="We repair what AI reads: your Google Business Profile, website structured data, menus, and the listings that still carry old information." data-zh="修好 AI 读的信息源：Google 商家档案、网站结构化数据、菜单、还挂着旧信息的各平台档案。">We repair what AI reads: your Google Business Profile, website structured data, menus, and the listings that still carry old information.</p>
-    </div>
-    <div class="card">
-      <div class="k">build</div>
-      <h3 data-en="Build" data-zh="建">Build</h3>
-      <p data-en="A clean one-page website that both humans and AI can actually read — menu, hours, map, and a WhatsApp button." data-zh="一页式官网，人和 AI 都读得懂——菜单、营业时间、地图、WhatsApp 按钮。">A clean one-page website that both humans and AI can actually read — menu, hours, map, and a WhatsApp button.</p>
+    <div class="card pillar">
+      <div class="k">business 2</div>
+      <h3 data-en="Websites" data-zh="做网站">Websites</h3>
+      <p data-en="No website? We build you a clean one-page site — menu, hours, map, WhatsApp button, beautiful on every phone, readable by AI. Old website? We refresh it. Working Shopify store? Keep it — you don't need us for that." data-zh="没网站？帮你建一个干净的一页式网站——菜单、营业时间、地图、WhatsApp 按钮，手机上好看，AI 也读得懂。网站旧了？帮你翻新。Shopify 店跑得好好的？继续用，不用换。">No website? We build you a clean one-page site — menu, hours, map, WhatsApp button, beautiful on every phone, readable by AI. Old website? We refresh it. Working Shopify store? Keep it — you don't need us for that.</p>
+      <a class="demo-link" href="#work" data-en="See our concept work →" data-zh="看概念作品 →">See our concept work →</a>
     </div>
   </div>
-</section>
-
-<section>
-  <h2 data-en="Pricing" data-zh="价格">Pricing</h2>
-  <table class="pricing">
-    <tr>
-      <th data-en="Service" data-zh="服务">Service</th>
-      <th data-en="Price" data-zh="价格">Price</th>
-      <th data-en="What you get" data-zh="包含内容">What you get</th>
-    </tr>
-    <tr>
-      <td data-en="Free AI Check" data-zh="免费 AI 体检">Free AI Check</td>
-      <td class="price free">$0</td>
-      <td data-en="2-page mini report with real screenshots and your 3 most damaging issues" data-zh="2 页迷你报告：真实截图 + 3 个最伤客流的问题">2-page mini report with real screenshots and your 3 most damaging issues</td>
-    </tr>
-    <tr>
-      <td data-en="AI Visibility Audit" data-zh="AI 可见度深度体检">AI Visibility Audit</td>
-      <td class="price">SGD 300</td>
-      <td data-en="15 live questions across ChatGPT, Google AI and Perplexity, five-area deep check, prioritised fix list" data-zh="ChatGPT、Google AI、Perplexity 实测 15 问 + 五项深查 + 按优先级排好的修复清单">15 live questions across ChatGPT, Google AI and Perplexity, five-area deep check, prioritised fix list</td>
-    </tr>
-    <tr>
-      <td data-en="Audit + Fixes" data-zh="审计 + 代修">Audit + Fixes</td>
-      <td class="price">SGD 500–800</td>
-      <td data-en="We do the fixing: Google Business Profile, structured data, menus, listings" data-zh="我们替你修：商家档案、结构化数据、菜单、平台信息">We do the fixing: Google Business Profile, structured data, menus, listings</td>
-    </tr>
-    <tr>
-      <td data-en="Complete Package" data-zh="全包">Complete Package</td>
-      <td class="price">SGD 780–1,280</td>
-      <td data-en="Everything above, plus a one-page website we design and build for you — menu, opening hours, map and WhatsApp button, beautiful on every phone, fully readable by AI, first 12 months of hosting included, two revision rounds" data-zh="以上全部 + 为你设计并建好的一页式官网——菜单、营业时间、地图、WhatsApp 按钮，手机上好看、AI 读得懂、含首 12 个月托管、含两轮修改">Everything above, plus a one-page website we design and build for you — menu, opening hours, map and WhatsApp button, beautiful on every phone, fully readable by AI, first 12 months of hosting included, two revision rounds</td>
-    </tr>
-  </table>
-  <p class="note" data-en="Every paid tier includes a before-and-after re-test 30–60 days later. Where a range is shown, the exact price depends on your number of outlets and platforms to fix — fixed in writing before we start." data-zh="所有付费档都含 30–60 天后的前后对比重测。区间价取决于门店数量和需要修复的平台数——开工前白纸黑字定死，不中途加价。">Every paid tier includes a before-and-after re-test 30–60 days later. Where a range is shown, the exact price depends on your number of outlets and platforms to fix — fixed in writing before we start.</p>
+  <div class="cards">
+    <div class="card">
+      <div class="k">and also</div>
+      <h3 data-en="Custom tools &amp; mini-apps" data-zh="定制小工具">Custom tools &amp; mini-apps</h3>
+      <p data-en="Small internal tools that save your team hours — daily sales dashboards, shift handover boards, simple booking and stock trackers. Built around how your shop actually runs. Quoted per project." data-zh="帮店里省时间的小工具——每日营业额看板、交接班记录、简单的预约和库存登记。按你店里的实际流程来做，按项目报价。">Small internal tools that save your team hours — daily sales dashboards, shift handover boards, simple booking and stock trackers. Built around how your shop actually runs. Quoted per project.</p>
+    </div>
+  </div>
 </section>
 
 <section id="work">
@@ -298,12 +289,45 @@
       <a class="demo-link" href="/demos/emberhall/" data-en="View the demo →" data-zh="查看示范站 →">View the demo →</a>
     </div>
   </div>
-  <p class="note" data-en="A site for your real shop is part of the Complete Package — built after the audit tells us exactly what to fix." data-zh="你的官网属于全包服务——先体检清楚该修什么，再动手建。">A site for your real shop is part of the Complete Package — built after the audit tells us exactly what to fix.</p>
+  <p class="note" data-en="A site for your real shop is part of the Complete Package — built after the audit tells us exactly what to fix." data-zh="你的官网属于全包服务——先检查清楚该修什么，再动手建。">A site for your real shop is part of the Complete Package — built after the audit tells us exactly what to fix.</p>
 </section>
+
+<section id="pricing">
+  <h2 data-en="Pricing" data-zh="价格">Pricing</h2>
+  <table class="pricing">
+    <tr>
+      <th data-en="Service" data-zh="服务">Service</th>
+      <th data-en="Price" data-zh="价格">Price</th>
+      <th data-en="What you get" data-zh="包含内容">What you get</th>
+    </tr>
+    <tr>
+      <td data-en="Free AI Check" data-zh="免费 AI 检查">Free AI Check</td>
+      <td class="price free">$0</td>
+      <td data-en="2-page mini report with real screenshots and your 3 most damaging issues" data-zh="2 页迷你报告：真实截图 + 3 个最伤客流的问题">2-page mini report with real screenshots and your 3 most damaging issues</td>
+    </tr>
+    <tr>
+      <td data-en="AI Visibility Audit" data-zh="AI 可见度深度检查">AI Visibility Audit</td>
+      <td class="price">SGD 300</td>
+      <td data-en="15 live questions across ChatGPT, Google AI and Perplexity, five-area deep check, prioritised fix list" data-zh="ChatGPT、Google AI、Perplexity 实测 15 问 + 五项深查 + 按优先级排好的修复清单">15 live questions across ChatGPT, Google AI and Perplexity, five-area deep check, prioritised fix list</td>
+    </tr>
+    <tr>
+      <td data-en="Audit + Fixes" data-zh="审计 + 代修">Audit + Fixes</td>
+      <td class="price">SGD 500–800</td>
+      <td data-en="We do the fixing: Google Business Profile, structured data, menus, listings" data-zh="我们替你修：商家档案、结构化数据、菜单、平台信息">We do the fixing: Google Business Profile, structured data, menus, listings</td>
+    </tr>
+    <tr>
+      <td data-en="Complete Package" data-zh="全包">Complete Package</td>
+      <td class="price">SGD 780–1,280</td>
+      <td data-en="Everything above, plus a one-page website we design and build for you — menu, opening hours, map and WhatsApp button, beautiful on every phone, fully readable by AI, first 12 months of hosting included, two revision rounds" data-zh="以上全部 + 为你设计并建好的一页式官网——菜单、营业时间、地图、WhatsApp 按钮，手机上好看、AI 读得懂、含首 12 个月托管、含两轮修改">Everything above, plus a one-page website we design and build for you — menu, opening hours, map and WhatsApp button, beautiful on every phone, fully readable by AI, first 12 months of hosting included, two revision rounds</td>
+    </tr>
+  </table>
+  <p class="note" data-en="Every paid tier includes a before-and-after re-test 30–60 days later. Where a range is shown, the exact price depends on your number of outlets and platforms to fix — fixed in writing before we start. Custom tools are quoted per project." data-zh="所有付费档都含 30–60 天后的前后对比重测。区间价取决于门店数量和需要修复的平台数——开工前白纸黑字定死，不中途加价。定制小工具按项目报价。">Every paid tier includes a before-and-after re-test 30–60 days later. Where a range is shown, the exact price depends on your number of outlets and platforms to fix — fixed in writing before we start.</p>
+</section>
+
 
 <section id="care">
   <h2 data-en="After the fix: monthly care" data-zh="修好之后：月度维护">After the fix: monthly care</h2>
-  <p class="hint" data-en="Facts go stale — hours change, menus rotate, reviews pile up. Care plans keep what we fixed correct, month after month. Offered to audit clients only; everything starts with the audit." data-zh="资料会走样——营业时间改了、菜单换了、评价堆着没人回。维护计划让修好的东西一直是对的。仅向完成体检的客户开放；一切从体检开始。">Facts go stale — hours change, menus rotate, reviews pile up. Care plans keep what we fixed correct, month after month. Offered to audit clients only; everything starts with the audit.</p>
+  <p class="hint" data-en="Facts go stale — hours change, menus rotate, reviews pile up. Care plans keep what we fixed correct, month after month. Offered to audit clients only; everything starts with the audit." data-zh="资料会走样——营业时间改了、菜单换了、评价堆着没人回。维护计划让修好的东西一直是对的。仅向完成检查的客户开放；一切从检查开始。">Facts go stale — hours change, menus rotate, reviews pile up. Care plans keep what we fixed correct, month after month. Offered to audit clients only; everything starts with the audit.</p>
   <div class="cards">
     <div class="card">
       <div class="k">watch</div>
@@ -327,7 +351,7 @@
   <h2 data-en="How it works" data-zh="流程">How it works</h2>
   <ol class="steps">
     <li data-en="Email us your business name." data-zh="把店名电邮给我们。">Email us your business name.</li>
-    <li data-en="Free 2-page check in your hands within 48 hours." data-zh="48 小时内收到免费 2 页体检报告。">Free 2-page check in your hands within 48 hours.</li>
+    <li data-en="Free 2-page check in your hands within 48 hours." data-zh="48 小时内收到免费 2 页检查报告。">Free 2-page check in your hands within 48 hours.</li>
     <li data-en="You decide. No obligation, no chasing." data-zh="你自己决定。不强推，也不会追着你推销。">You decide. No obligation, no chasing.</li>
   </ol>
 </section>
@@ -357,7 +381,7 @@
        data-zh="不同信息源速度不同——快则几天，多数在几周内。所以每个付费档都含 30–60 天后的截图重测。">Sources update at different speeds — some within days, most within weeks. That's why every paid engagement includes a re-test 30–60 days later, with screenshots.</p>
   </details>
   <details>
-    <summary data-en="What does the free check include?" data-zh="免费体检包含什么？">What does the free check include?</summary>
+    <summary data-en="What does the free check include?" data-zh="免费检查包含什么？">What does the free check include?</summary>
     <p data-en="A 2-page mini report: how three AI assistants currently answer real customer questions about your business, the three most damaging issues, and real screenshots. No signup, no obligation."
        data-zh="2 页迷你报告：三大 AI 目前怎么回答顾客关于你的真实问题、3 个最伤客流的问题、以及真实截图。无需注册，无任何义务。">A 2-page mini report: how three AI assistants currently answer real customer questions about your business, the three most damaging issues, and real screenshots. No signup, no obligation.</p>
   </details>
@@ -369,12 +393,17 @@
   <details>
     <summary data-en="Who is behind showsup?" data-zh="showsup 背后是谁？">Who is behind showsup?</summary>
     <p data-en="A Singapore F&B operations professional — years spent running real kitchens and outlets, now fixing how AI describes them. We keep a low profile and let the work speak: your free check comes with real screenshots you can verify yourself before paying anything."
-       data-zh="一位新加坡餐饮运营从业者——多年管理真实厨房和门店，现在专门修 AI 对它们的描述。我们行事低调，让作品说话：免费体检附真实截图，付任何钱之前你都可以自己验证。">A Singapore F&B operations professional — years spent running real kitchens and outlets, now fixing how AI describes them. We keep a low profile and let the work speak: your free check comes with real screenshots you can verify yourself before paying anything.</p>
+       data-zh="一位新加坡餐饮运营从业者——多年管理真实厨房和门店，现在专门修 AI 对它们的描述。我们行事低调，让作品说话：免费检查附真实截图，付任何钱之前你都可以自己验证。">A Singapore F&B operations professional — years spent running real kitchens and outlets, now fixing how AI describes them. We keep a low profile and let the work speak: your free check comes with real screenshots you can verify yourself before paying anything.</p>
+  </details>
+  <details>
+    <summary data-en="My website is on Shopify / Wix. Is this still useful for me?" data-zh="我的网站是 Shopify / Wix 做的，对我还有用吗？">My website is on Shopify / Wix. Is this still useful for me?</summary>
+    <p data-en="Yes — keep your site, we don't touch it. AI assistants mostly read things outside your website: your Google Business Profile, maps, review sites and platform listings. That's the layer we check, fix and maintain. We only build websites for businesses that have none, or one that's badly outdated."
+       data-zh="有用——你的网站继续用，我们不碰。AI 读的大多是网站以外的资料：Google 商家档案、地图、点评网、各平台的信息。我们查、修、维护的就是这一层。只有完全没网站、或网站旧到不能用的商家，我们才帮忙建。">Yes — keep your site, we don't touch it. AI assistants mostly read things outside your website: your Google Business Profile, maps, review sites and platform listings. That's the layer we check, fix and maintain. We only build websites for businesses that have none, or one that's badly outdated.</p>
   </details>
   <details>
     <summary data-en="How do I pay?" data-zh="怎么付款？">How do I pay?</summary>
     <p data-en="PayNow or bank transfer, against an itemised invoice. For the audit, you pay only after the report is in your hands."
-       data-zh="PayNow 或银行转账，凭列明项目的账单付款。体检报告先到你手上，你才付款。">PayNow or bank transfer, against an itemised invoice. For the audit, you pay only after the report is in your hands.</p>
+       data-zh="PayNow 或银行转账，凭列明项目的账单付款。检查报告先到你手上，你才付款。">PayNow or bank transfer, against an itemised invoice. For the audit, you pay only after the report is in your hands.</p>
   </details>
   <details>
     <summary data-en="What if I'm not happy with the work?" data-zh="做得不满意怎么办？">What if I'm not happy with the work?</summary>
