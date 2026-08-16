@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>showsup — When customers ask AI, you show up</title>
+<meta name="description" content="AI visibility for local businesses in Singapore, starting with F&B. We check how ChatGPT, Perplexity and Google AI describe your business, fix what they read, and prove it with a re-test. Free 2-page AI check.">
+<meta property="og:title" content="showsup — When customers ask AI, you show up">
+<meta property="og:description" content="Customers now ask AI where to eat, shop, and book. We make sure the answer includes you — and gets your details right. Free 2-page AI check.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://showsup.sg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "showsup",
+  "url": "https://showsup.sg",
+  "description": "AI search visibility (GEO) audits, fixes, and one-page websites for local businesses in Singapore, starting with F&B.",
+  "areaServed": { "@type": "Country", "name": "Singapore" },
+  "priceRange": "SGD 0 - SGD 1280",
+  "makesOffer": [
+    { "@type": "Offer", "name": "Free AI Check", "price": "0", "priceCurrency": "SGD", "description": "A free 2-page mini report showing how AI assistants currently describe your business, with real screenshots." },
+    { "@type": "Offer", "name": "AI Visibility Audit", "price": "300", "priceCurrency": "SGD", "description": "15 live questions across 3 AI assistants, a five-area deep check, and a prioritised fix list." },
+    { "@type": "Offer", "name": "Audit + Fixes", "price": "500", "priceCurrency": "SGD", "description": "The full audit plus hands-on fixes: Google Business Profile, website structured data, menus, and listings. SGD 500-800." },
+    { "@type": "Offer", "name": "Complete Package", "price": "780", "priceCurrency": "SGD", "description": "Audit, fixes, and a one-page website. SGD 780-1,280." }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Why can't I just fix it myself?", "acceptedAnswer": { "@type": "Answer", "text": "You can — once you know what's broken and what 'fixed' looks like. Most owners don't know their address is wrong in an AI answer, and terms like structured data or schema aren't part of running a business. We diagnose, fix, and prove the change, while you keep running your shop." } },
+    { "@type": "Question", "name": "Do you need my passwords?", "acceptedAnswer": { "@type": "Answer", "text": "Never. Every platform has an invite or manager function. You grant access, you keep ownership, and you can revoke us anytime." } },
+    { "@type": "Question", "name": "How long until AI answers update?", "acceptedAnswer": { "@type": "Answer", "text": "Factual sources update at different speeds — some within days, most within weeks. That's why every paid engagement includes a before-and-after re-test 30 to 60 days later, with screenshots." } },
+    { "@type": "Question", "name": "What does the free check include?", "acceptedAnswer": { "@type": "Answer", "text": "A 2-page mini report: how three AI assistants currently answer real customer questions about your business, the three most damaging issues we found, and real screenshots. No signup, no obligation." } },
+    { "@type": "Question", "name": "Do you only work with F&B?", "acceptedAnswer": { "@type": "Answer", "text": "We started in F&B because that's the industry we come from. The method works for any local business — clinics, gyms, salons, studios." } }
+  ]
+}
+</script>
+<style>
+  :root {
+    --ink: #16130f;
+    --paper: #faf7f2;
+    --card: #ffffff;
+    --accent: #ff4d2e;
+    --accent-soft: #ffe9e4;
+    --muted: #6f6a62;
+    --line: #e8e2d8;
+    --good: #1a7f4b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--paper); color: var(--ink); line-height: 1.6;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+  .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; }
+  .logo .up { color: var(--accent); display: inline-block; transition: transform .2s; }
+  .logo:hover .up { transform: translateY(-3px); }
+  .lang-toggle { border: 1px solid var(--line); border-radius: 999px; overflow: hidden; display: flex; background: var(--card); }
+  .lang-toggle button { border: none; background: none; padding: 6px 14px; font-size: .85rem; cursor: pointer; color: var(--muted); }
+  .lang-toggle button.active { background: var(--ink); color: #fff; }
+  .hero { padding: 72px 0 56px; }
+  .hero h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.1; letter-spacing: -1px; font-weight: 800; max-width: 16ch; }
+  .hero h1 .hl { color: var(--accent); }
+  .hero p { margin-top: 20px; font-size: 1.15rem; color: var(--muted); max-width: 52ch; }
+  .cta {
+    display: inline-block; margin-top: 32px; background: var(--accent); color: #fff;
+    padding: 14px 28px; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: 1.05rem;
+    transition: transform .15s;
+  }
+  .cta:hover { transform: translateY(-2px); }
+  section { padding: 56px 0; }
+  section h2 { font-size: 1.7rem; letter-spacing: -0.5px; margin-bottom: 20px; }
+  .chatcase { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; margin-top: 24px; }
+  .chatcase .label { font-size: .78rem; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 16px; }
+  .bubble { border-radius: 14px; padding: 12px 16px; margin-bottom: 12px; max-width: 90%; font-size: .95rem; }
+  .bubble.q { background: var(--ink); color: #fff; margin-left: auto; width: fit-content; }
+  .bubble.a { background: var(--paper); border: 1px solid var(--line); position: relative; margin-bottom: 22px; }
+  .stamp {
+    position: absolute; right: 16px; bottom: -14px; background: #fff;
+    border: 2px solid #c0271a; color: #c0271a; font-weight: 800; font-size: .72rem;
+    padding: 4px 10px; border-radius: 6px; transform: rotate(-4deg); letter-spacing: .5px;
+  }
+  .caseline { margin-top: 28px; font-size: 1.05rem; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 12px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+  .card .k { font-size: .8rem; font-weight: 800; color: var(--accent); text-transform: lowercase; letter-spacing: 1px; }
+  .card h3 { margin: 8px 0 8px; font-size: 1.15rem; }
+  .card p { color: var(--muted); font-size: .95rem; }
+  table.pricing { width: 100%; border-collapse: collapse; margin-top: 12px; background: var(--card); border-radius: 16px; overflow: hidden; border: 1px solid var(--line); }
+  .pricing th, .pricing td { text-align: left; padding: 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .pricing tr:last-child td { border-bottom: none; }
+  .pricing th { font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); }
+  .price { font-weight: 800; white-space: nowrap; }
+  .price.free { color: var(--good); }
+  .note { font-size: .85rem; color: var(--muted); margin-top: 10px; }
+  ol.steps { margin: 12px 0 0 0; padding: 0; list-style: none; counter-reset: s; }
+  ol.steps li { counter-increment: s; display: flex; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+  ol.steps li::before { content: counter(s); font-weight: 800; color: var(--accent); font-size: 1.2rem; min-width: 1.4em; }
+  .honesty { background: var(--ink); color: #f5f1ea; border-radius: 16px; padding: 32px; margin-top: 8px; }
+  .honesty p { margin-bottom: 14px; font-size: 1.02rem; }
+  .honesty p:last-child { margin-bottom: 0; }
+  .honesty .em { color: #ffb3a3; font-weight: 700; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin-bottom: 10px; }
+  summary { font-weight: 700; cursor: pointer; }
+  details p { margin-top: 10px; color: var(--muted); font-size: .95rem; }
+  .freecheck { text-align: center; padding: 72px 0; }
+  .freecheck h2 { font-size: 2rem; }
+  .freecheck .sub { color: var(--muted); margin-top: 8px; }
+  footer { border-top: 1px solid var(--line); padding: 28px 0 48px; color: var(--muted); font-size: .85rem; text-align: center; }
+  @media (max-width: 560px) {
+    .hero { padding: 48px 0 40px; }
+    .pricing th:nth-child(3), .pricing td:nth-child(3) { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav>
+  <div class="logo">shows<span class="up">up</span></div>
+  <div class="lang-toggle">
+    <button id="lang-en" class="active" type="button">EN</button>
+    <button id="lang-zh" type="button">中文</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1><span data-en="When customers ask AI, " data-zh="顾客问 AI 的时候，">When customers ask AI, </span><span class="hl" data-en="you show up." data-zh="答案里要有你。">you show up.</span></h1>
+  <p data-en="Customers now ask ChatGPT and Google AI where to eat, shop, and book. We make sure the answer includes you — and gets your details right. AI visibility for local businesses in Singapore, starting with F&B."
+     data-zh="顾客现在直接问 ChatGPT 和 Google AI 去哪吃、去哪买、去哪订。我们确保答案里有你，而且信息是对的。新加坡本地生意的 AI 可见度工作室，从餐饮起步。">Customers now ask ChatGPT and Google AI where to eat, shop, and book. We make sure the answer includes you — and gets your details right. AI visibility for local businesses in Singapore, starting with F&B.</p>
+  <a class="cta" href="#free-check" data-en="Get your free AI check" data-zh="领取免费 AI 体检">Get your free AI check</a>
+</header>
+
+<section>
+  <h2 data-en="AI is already answering questions about your business. Is it right?" data-zh="AI 已经在替你回答顾客的问题了。它答对了吗？">AI is already answering questions about your business. Is it right?</h2>
+  <div class="chatcase">
+    <div class="label" data-en="Real answer from an AI assistant · August 2026 · shop name withheld" data-zh="AI 助手的真实回答 · 2026 年 8 月 · 店名已隐去">Real answer from an AI assistant · August 2026 · shop name withheld</div>
+    <div class="bubble q" data-en="Where is ___ and what are the opening hours?" data-zh="___ 在哪里？营业时间是？">Where is ___ and what are the opening hours?</div>
+    <div class="bubble a">
+      <span data-en="___ is at 136 ___ North Ave 3 … Opening hours are 9:00 AM–7:00 PM daily." data-zh="___ 位于 136 ___ North Ave 3……营业时间为每天 9:00–19:00。">___ is at 136 ___ North Ave 3 … Opening hours are 9:00 AM–7:00 PM daily.</span>
+      <span class="stamp" data-en="CLOSED SINCE AUG 2025" data-zh="2025 年 8 月已结业">CLOSED SINCE AUG 2025</span>
+    </div>
+  </div>
+  <p class="caseline"
+     data-en="A Singapore specialty cafe moved to the CBD in 2025. A year later, AI assistants still send customers to its closed outlet — with the old opening hours. The cafe has no idea."
+     data-zh="一家新加坡精品咖啡馆 2025 年搬到了 CBD。一年后，AI 还在把顾客送去已经关门的旧店——连营业时间都是旧的。而店主对此毫不知情。">A Singapore specialty cafe moved to the CBD in 2025. A year later, AI assistants still send customers to its closed outlet — with the old opening hours. The cafe has no idea.</p>
+</section>
+
+<section>
+  <h2 data-en="What we do" data-zh="我们做什么">What we do</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="k">check</div>
+      <h3 data-en="Audit" data-zh="查">Audit</h3>
+      <p data-en="We ask three AI assistants the questions your customers ask, and document exactly what comes back — with screenshots." data-zh="用顾客真实会问的问题实测三大 AI，逐条截图记录它们怎么说你的店。">We ask three AI assistants the questions your customers ask, and document exactly what comes back — with screenshots.</p>
+    </div>
+    <div class="card">
+      <div class="k">fix</div>
+      <h3 data-en="Fix" data-zh="修">Fix</h3>
+      <p data-en="We repair what AI reads: your Google Business Profile, website structured data, menus, and the listings that still carry old information." data-zh="修好 AI 读的信息源：Google 商家档案、网站结构化数据、菜单、还挂着旧信息的各平台档案。">We repair what AI reads: your Google Business Profile, website structured data, menus, and the listings that still carry old information.</p>
+    </div>
+    <div class="card">
+      <div class="k">build</div>
+      <h3 data-en="Build" data-zh="建">Build</h3>
+      <p data-en="A clean one-page website that both humans and AI can actually read — menu, hours, map, and a WhatsApp button." data-zh="一页式官网，人和 AI 都读得懂——菜单、营业时间、地图、WhatsApp 按钮。">A clean one-page website that both humans and AI can actually read — menu, hours, map, and a WhatsApp button.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 data-en="Pricing" data-zh="价格">Pricing</h2>
+  <table class="pricing">
+    <tr>
+      <th data-en="Service" data-zh="服务">Service</th>
+      <th data-en="Price" data-zh="价格">Price</th>
+      <th data-en="What you get" data-zh="包含内容">What you get</th>
+    </tr>
+    <tr>
+      <td data-en="Free AI Check" data-zh="免费 AI 体检">Free AI Check</td>
+      <td class="price free">$0</td>
+      <td data-en="2-page mini report with real screenshots and your 3 most damaging issues" data-zh="2 页迷你报告：真实截图 + 3 个最伤客流的问题">2-page mini report with real screenshots and your 3 most damaging issues</td>
+    </tr>
+    <tr>
+      <td data-en="AI Visibility Audit" data-zh="AI 可见度完整审计">AI Visibility Audit</td>
+      <td class="price">SGD 300</td>
+      <td data-en="15 live questions across 3 AI assistants, five-area deep check, prioritised fix list" data-zh="三大 AI 实测 15 问 + 五项深查 + 按优先级排好的修复清单">15 live questions across 3 AI assistants, five-area deep check, prioritised fix list</td>
+    </tr>
+    <tr>
+      <td data-en="Audit + Fixes" data-zh="审计 + 代修">Audit + Fixes</td>
+      <td class="price">SGD 500–800</td>
+      <td data-en="We do the fixing: Google Business Profile, structured data, menus, listings" data-zh="我们替你修：商家档案、结构化数据、菜单、平台信息">We do the fixing: Google Business Profile, structured data, menus, listings</td>
+    </tr>
+    <tr>
+      <td data-en="Complete Package" data-zh="全包">Complete Package</td>
+      <td class="price">SGD 780–1,280</td>
+      <td data-en="Everything above, plus a one-page website built for humans and AI" data-zh="以上全部 + 一页式官网（人和 AI 都读得懂）">Everything above, plus a one-page website built for humans and AI</td>
+    </tr>
+  </table>
+  <p class="note" data-en="Website only: SGD 480. Every paid tier includes a before-and-after re-test 30–60 days later." data-zh="仅做官网：SGD 480。所有付费档都含 30–60 天后的前后对比重测。">Website only: SGD 480. Every paid tier includes a before-and-after re-test 30–60 days later.</p>
+</section>
+
+<section>
+  <h2 data-en="How it works" data-zh="流程">How it works</h2>
+  <ol class="steps">
+    <li data-en="Email us your business name." data-zh="把你的店名发邮件给我们。">Email us your business name.</li>
+    <li data-en="Free 2-page check in your hands within 48 hours." data-zh="48 小时内收到免费 2 页体检报告。">Free 2-page check in your hands within 48 hours.</li>
+    <li data-en="You decide. No obligation, no chasing." data-zh="你自己决定。不强推，不追销。">You decide. No obligation, no chasing.</li>
+  </ol>
+</section>
+
+<section>
+  <div class="honesty">
+    <p><span class="em" data-en="Nobody can guarantee a spot in AI's “best of” lists" data-zh="没有人能保证你进入 AI 的“最佳推荐”榜单">Nobody can guarantee a spot in AI's “best of” lists</span><span data-en=" — anyone who promises that is lying to you. We fix what AI reads, and we prove it with a before-and-after re-test 30–60 days later." data-zh="——谁向你保证，谁就是在骗你。我们修好 AI 读的信息源，并用 30–60 天后的前后对比重测来证明效果。"> — anyone who promises that is lying to you. We fix what AI reads, and we prove it with a before-and-after re-test 30–60 days later.</span></p>
+    <p><span class="em" data-en="And we never ask for your passwords." data-zh="我们也永远不会要你的密码。">And we never ask for your passwords.</span><span data-en=" Every platform has an invite function; you can revoke our access anytime." data-zh="每个平台都有邀请管理员功能，你随时可以撤销我们的权限。"> Every platform has an invite function; you can revoke our access anytime.</span></p>
+  </div>
+</section>
+
+<section>
+  <h2 data-en="Questions" data-zh="常见问题">Questions</h2>
+  <details>
+    <summary data-en="Why can't I just fix it myself?" data-zh="我不能自己修吗？">Why can't I just fix it myself?</summary>
+    <p data-en="You can — once you know what's broken and what “fixed” looks like. Most owners don't know their address is wrong in an AI answer, and terms like structured data aren't part of running a business. We diagnose, fix, and prove the change, while you keep running your shop."
+       data-zh="当然可以——前提是你知道哪里坏了、修成什么样才算对。大多数店主根本不知道 AI 答错了自己的地址，也没空研究什么叫结构化数据。我们负责诊断、修复、拿出前后证据，你继续做生意。">You can — once you know what's broken and what “fixed” looks like. Most owners don't know their address is wrong in an AI answer, and terms like structured data aren't part of running a business. We diagnose, fix, and prove the change, while you keep running your shop.</p>
+  </details>
+  <details>
+    <summary data-en="Do you need my passwords?" data-zh="需要给你们密码吗？">Do you need my passwords?</summary>
+    <p data-en="Never. Every platform has an invite or manager function. You grant access, you keep ownership, and you can revoke us anytime."
+       data-zh="永远不需要。每个平台都有邀请/管理员功能。你授权、你持有所有权、你随时可以撤销。">Never. Every platform has an invite or manager function. You grant access, you keep ownership, and you can revoke us anytime.</p>
+  </details>
+  <details>
+    <summary data-en="How long until AI answers update?" data-zh="AI 的回答多久会更新？">How long until AI answers update?</summary>
+    <p data-en="Sources update at different speeds — some within days, most within weeks. That's why every paid engagement includes a re-test 30–60 days later, with screenshots."
+       data-zh="不同信息源速度不同——快则几天，多数在几周内。所以每个付费档都含 30–60 天后的截图重测。">Sources update at different speeds — some within days, most within weeks. That's why every paid engagement includes a re-test 30–60 days later, with screenshots.</p>
+  </details>
+  <details>
+    <summary data-en="What does the free check include?" data-zh="免费体检包含什么？">What does the free check include?</summary>
+    <p data-en="A 2-page mini report: how three AI assistants currently answer real customer questions about your business, the three most damaging issues, and real screenshots. No signup, no obligation."
+       data-zh="2 页迷你报告：三大 AI 目前怎么回答顾客关于你的真实问题、3 个最伤客流的问题、以及真实截图。无需注册，无任何义务。">A 2-page mini report: how three AI assistants currently answer real customer questions about your business, the three most damaging issues, and real screenshots. No signup, no obligation.</p>
+  </details>
+  <details>
+    <summary data-en="Do you only work with F&B?" data-zh="只做餐饮吗？">Do you only work with F&B?</summary>
+    <p data-en="We started in F&B because that's the industry we come from. The method works for any local business — clinics, gyms, salons, studios."
+       data-zh="我们从餐饮起步，因为这是我们最懂的行业。方法本身适用于任何本地生意——诊所、健身房、美容院、工作室。">We started in F&B because that's the industry we come from. The method works for any local business — clinics, gyms, salons, studios.</p>
+  </details>
+</section>
+
+<section class="freecheck" id="free-check">
+  <h2 data-en="Find out what AI says about you" data-zh="看看 AI 现在怎么说你的店">Find out what AI says about you</h2>
+  <p class="sub" data-en="Free 2-page report. No signup, no obligation." data-zh="免费 2 页报告。无需注册，无任何义务。">Free 2-page report. No signup, no obligation.</p>
+  <!-- WhatsApp CTA removed for launch (Ernest, 16 Aug) — restore with wa.me link once the business number exists. hello@showsup.sg needs email forwarding set up in the Exabytes panel. -->
+  <a class="cta" href="mailto:hello@showsup.sg?subject=Free%20AI%20check&body=Hi%20showsup%2C%20my%20business%20is%20" data-en="Email us your business name" data-zh="把店名发邮件给我们">Email us your business name</a>
+</section>
+
+<footer>
+  <span data-en="showsup · Singapore · hello@showsup.sg" data-zh="showsup · 新加坡 · hello@showsup.sg">showsup · Singapore · hello@showsup.sg</span>
+</footer>
+
+</div>
+<script>
+(function () {
+  var LANG_KEY = 'showsup-lang';
+  function setLang(lang) {
+    document.documentElement.lang = lang === 'zh' ? 'zh' : 'en';
+    document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+    document.getElementById('lang-zh').classList.toggle('active', lang === 'zh');
+    document.querySelectorAll('[data-en]').forEach(function (el) {
+      var v = el.getAttribute(lang === 'zh' ? 'data-zh' : 'data-en');
+      if (v !== null) el.textContent = v;
+    });
+    try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
+  }
+  document.getElementById('lang-en').addEventListener('click', function () { setLang('en'); });
+  document.getElementById('lang-zh').addEventListener('click', function () { setLang('zh'); });
+  var saved = null;
+  try { saved = localStorage.getItem(LANG_KEY); } catch (e) {}
+  if (saved === 'zh') setLang('zh');
+})();
+</script>
+</body>
+</html>
