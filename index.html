@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>showsup — When customers ask AI, you show up</title>
+<link rel="canonical" href="https://showsup.sg/">
+<script>try{if(localStorage.getItem('showsup-lang')==='zh')document.documentElement.lang='zh'}catch(e){}</script>
 <meta name="description" content="AI visibility for local businesses in Singapore, starting with F&B. We check how ChatGPT, Perplexity and Google AI describe your business, fix what they read, and prove it with a re-test. Free 2-page AI check.">
 <meta property="og:title" content="showsup — When customers ask AI, you show up">
 <meta property="og:description" content="Customers now ask AI where to eat, shop, and book. We make sure the answer includes you — and gets your details right. Free 2-page AI check.">
@@ -51,7 +53,7 @@
     --good: #1a7f4b;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
     background: var(--paper); color: var(--ink); line-height: 1.6;
@@ -89,7 +91,7 @@
   .caseline { margin-top: 28px; font-size: 1.05rem; }
   .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 12px; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
-  .card .k { font-size: .8rem; font-weight: 800; color: var(--accent); text-transform: lowercase; letter-spacing: 1px; }
+  .card .k { font-size: .8rem; font-weight: 800; color: #d63a1c; text-transform: lowercase; letter-spacing: 1px; }
   .card h3 { margin: 8px 0 8px; font-size: 1.15rem; }
   .card p { color: var(--muted); font-size: .95rem; }
   table.pricing { width: 100%; border-collapse: collapse; margin-top: 12px; background: var(--card); border-radius: 16px; overflow: hidden; border: 1px solid var(--line); }
@@ -107,17 +109,21 @@
   .honesty p:last-child { margin-bottom: 0; }
   .honesty .em { color: #ffb3a3; font-weight: 700; }
   details { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin-bottom: 10px; }
-  summary { font-weight: 700; cursor: pointer; }
+  summary { font-weight: 700; cursor: pointer; padding: 8px 0; }
   details p { margin-top: 10px; color: var(--muted); font-size: .95rem; }
   .freecheck { text-align: center; padding: 72px 0; }
   .freecheck h2 { font-size: 2rem; }
   .freecheck .sub { color: var(--muted); margin-top: 8px; }
   .hint { color: var(--muted); font-size: .98rem; max-width: 60ch; margin-bottom: 16px; }
-  .demo-link { display: inline-block; margin-top: 10px; color: var(--accent); font-weight: 700; text-decoration: none; padding: 6px 0; }
+  .demo-link { display: inline-block; margin-top: 10px; color: #d63a1c; font-weight: 700; text-decoration: none; padding: 12px 0; }
   .demo-link:hover { text-decoration: underline; }
   .permo { font-size: .8rem; font-weight: 400; color: var(--muted); }
+  .caseline, .note, details p { max-width: 62ch; }
+  .honesty p { max-width: 72ch; }
+  html[lang="zh"] .hero h1 { max-width: 12em; letter-spacing: 0; }
+  :is(a, button, summary):focus-visible { outline: 2px solid #d63a1c; outline-offset: 3px; }
   footer { border-top: 1px solid var(--line); padding: 28px 0 48px; color: var(--muted); font-size: .85rem; text-align: center; }
-  @media (max-width: 560px) {
+  @media (max-width: 720px) {
     .hero { padding: 48px 0 40px; }
     .pricing tr:first-child { display: none; }
     .pricing, .pricing tbody, .pricing tr, .pricing td { display: block; width: 100%; }
@@ -141,7 +147,8 @@
 </nav>
 
 <header class="hero">
-  <h1><span data-en="When customers ask AI, " data-zh="顾客问 AI 的时候，">When customers ask AI, </span><span class="hl" data-en="you show up." data-zh="答案里要有你。">you show up.</span></h1>
+  <h1><span data-en="When customers ask AI, " data-zh="顾客问 AI 的时候，">When customers ask AI, </span><span class="hl" data-en="you show up." data-zh="答案里要有你。">you show up.</span></h1><!--
+  -->
   <p data-en="Customers now ask ChatGPT and Google AI where to eat, shop, and book. We make sure the answer includes you — and gets your details right. AI visibility for local businesses in Singapore, starting with F&B."
      data-zh="顾客现在直接问 ChatGPT 和 Google AI 去哪吃、去哪买、去哪订。我们确保答案里有你，而且信息是对的。新加坡本地生意的 AI 可见度工作室，从餐饮起步。">Customers now ask ChatGPT and Google AI where to eat, shop, and book. We make sure the answer includes you — and gets your details right. AI visibility for local businesses in Singapore, starting with F&B.</p>
   <a class="cta" href="#free-check" data-en="Get your free AI check" data-zh="领取免费 AI 体检">Get your free AI check</a>
@@ -158,8 +165,8 @@
     </div>
   </div>
   <p class="caseline"
-     data-en="A Singapore specialty cafe moved to the CBD in 2025. A year later, AI assistants still send customers to its closed outlet — with the old opening hours. The cafe has no idea."
-     data-zh="一家新加坡精品咖啡馆 2025 年搬到了 CBD。一年后，AI 还在把顾客送去已经关门的旧店——连营业时间都是旧的。而店主对此毫不知情。">A Singapore specialty cafe moved to the CBD in 2025. A year later, AI assistants still send customers to its closed outlet — with the old opening hours. The cafe has no idea.</p>
+     data-en="A Singapore specialty cafe moved to the CBD in 2025. A year later, AI assistants still send customers to its closed outlet — with the old opening hours. Nobody had told the owner, because nobody checks."
+     data-zh="一家新加坡精品咖啡馆 2025 年搬到了 CBD。一年后，AI 还在把顾客送去已经关门的旧店——连营业时间都是旧的。没有人告诉店主，因为没有人会去查。">A Singapore specialty cafe moved to the CBD in 2025. A year later, AI assistants still send customers to its closed outlet — with the old opening hours. Nobody had told the owner, because nobody checks.</p>
 </section>
 
 <section>
@@ -197,9 +204,9 @@
       <td data-en="2-page mini report with real screenshots and your 3 most damaging issues" data-zh="2 页迷你报告：真实截图 + 3 个最伤客流的问题">2-page mini report with real screenshots and your 3 most damaging issues</td>
     </tr>
     <tr>
-      <td data-en="AI Visibility Audit" data-zh="AI 可见度完整审计">AI Visibility Audit</td>
+      <td data-en="AI Visibility Audit" data-zh="AI 可见度深度体检">AI Visibility Audit</td>
       <td class="price">SGD 300</td>
-      <td data-en="15 live questions across 3 AI assistants, five-area deep check, prioritised fix list" data-zh="三大 AI 实测 15 问 + 五项深查 + 按优先级排好的修复清单">15 live questions across 3 AI assistants, five-area deep check, prioritised fix list</td>
+      <td data-en="15 live questions across ChatGPT, Google AI and Perplexity, five-area deep check, prioritised fix list" data-zh="ChatGPT、Google AI、Perplexity 实测 15 问 + 五项深查 + 按优先级排好的修复清单">15 live questions across ChatGPT, Google AI and Perplexity, five-area deep check, prioritised fix list</td>
     </tr>
     <tr>
       <td data-en="Audit + Fixes" data-zh="审计 + 代修">Audit + Fixes</td>
@@ -209,35 +216,35 @@
     <tr>
       <td data-en="Complete Package" data-zh="全包">Complete Package</td>
       <td class="price">SGD 780–1,280</td>
-      <td data-en="Everything above, plus a one-page website we design and build for you — menu, opening hours, map and WhatsApp button, beautiful on every phone, fully readable by AI, free hosting, two revision rounds included" data-zh="以上全部 + 为你设计并建好的一页式官网——菜单、营业时间、地图、WhatsApp 按钮，手机上好看、AI 读得懂、免费托管、含两轮修改">Everything above, plus a one-page website we design and build for you — menu, opening hours, map and WhatsApp button, beautiful on every phone, fully readable by AI, free hosting, two revision rounds included</td>
+      <td data-en="Everything above, plus a one-page website we design and build for you — menu, opening hours, map and WhatsApp button, beautiful on every phone, fully readable by AI, first 12 months of hosting included, two revision rounds" data-zh="以上全部 + 为你设计并建好的一页式官网——菜单、营业时间、地图、WhatsApp 按钮，手机上好看、AI 读得懂、含首 12 个月托管、含两轮修改">Everything above, plus a one-page website we design and build for you — menu, opening hours, map and WhatsApp button, beautiful on every phone, fully readable by AI, first 12 months of hosting included, two revision rounds</td>
     </tr>
   </table>
-  <p class="note" data-en="Every paid tier includes a before-and-after re-test 30–60 days later." data-zh="所有付费档都含 30–60 天后的前后对比重测。">Every paid tier includes a before-and-after re-test 30–60 days later.</p>
+  <p class="note" data-en="Every paid tier includes a before-and-after re-test 30–60 days later. Where a range is shown, the exact price depends on your number of outlets and platforms to fix — fixed in writing before we start." data-zh="所有付费档都含 30–60 天后的前后对比重测。区间价取决于门店数量和需要修复的平台数——开工前白纸黑字定死，不中途加价。">Every paid tier includes a before-and-after re-test 30–60 days later. Where a range is shown, the exact price depends on your number of outlets and platforms to fix — fixed in writing before we start.</p>
 </section>
 
 <section id="work">
-  <h2 data-en="Recent work" data-zh="近期作品">Recent work</h2>
-  <p class="hint" data-en="Two concept builds showing the range of a one-page site — and both are fully readable by AI assistants, menus and hours included." data-zh="两个概念作品，展示一页式网站的两种气质——菜单和营业时间对 AI 完全可读。">Two concept builds showing the range of a one-page site — and both are fully readable by AI assistants, menus and hours included.</p>
+  <h2 data-en="Concept work" data-zh="概念作品">Concept work</h2>
+  <p class="hint" data-en="Two fictional concept builds showing the range of a one-page site — light and dark, menus and hours all readable by AI assistants." data-zh="两个虚构的概念作品，展示一页式网站的两种气质——菜单和营业时间对 AI 完全可读。">Two fictional concept builds showing the range of a one-page site — light and dark, menus and hours all readable by AI assistants.</p>
   <div class="cards">
     <div class="card">
       <div class="k">light</div>
       <h3>Kopi &amp; Kin</h3>
       <p data-en="A specialty cafe in a Joo Chiat shophouse — warm, editorial, unhurried." data-zh="如切店屋里的精品咖啡馆——温暖、杂志感、不着急。">A specialty cafe in a Joo Chiat shophouse — warm, editorial, unhurried.</p>
-      <a class="demo-link" href="/demos/kopi-kin/" data-en="View live demo →" data-zh="看现场 demo →">View live demo →</a>
+      <a class="demo-link" href="/demos/kopi-kin/" data-en="View the demo →" data-zh="查看示范站 →">View the demo →</a>
     </div>
     <div class="card">
       <div class="k">dark</div>
       <h3>Emberhall</h3>
       <p data-en="A charcoal grill on Keong Saik — dark, dramatic, all fire." data-zh="恭锡路上的炭火烧烤——深色、戏剧感、一身火气。">A charcoal grill on Keong Saik — dark, dramatic, all fire.</p>
-      <a class="demo-link" href="/demos/emberhall/" data-en="View live demo →" data-zh="看现场 demo →">View live demo →</a>
+      <a class="demo-link" href="/demos/emberhall/" data-en="View the demo →" data-zh="查看示范站 →">View the demo →</a>
     </div>
   </div>
-  <p class="note" data-en="Both are fictional concept demos. Yours would be built about your real shop — usually before you even reply to us." data-zh="两个都是虚构的概念作品。你的那份会用你真实的店来建——而且通常在你回复我们之前就已经建好了。">Both are fictional concept demos. Yours would be built about your real shop — usually before you even reply to us.</p>
+  <p class="note" data-en="A site for your real shop is part of the Complete Package — built after the audit tells us exactly what to fix." data-zh="你的官网属于全包服务——先体检清楚该修什么，再动手建。">A site for your real shop is part of the Complete Package — built after the audit tells us exactly what to fix.</p>
 </section>
 
 <section id="care">
-  <h2 data-en="After the fix: monthly care" data-zh="修好之后：月度护理">After the fix: monthly care</h2>
-  <p class="hint" data-en="Facts drift — hours change, menus rotate, reviews pile up. Care plans keep what we fixed correct, month after month. Offered to audit clients only; everything starts with the audit." data-zh="信息会漂移——时间改了、菜单换了、评价堆着没人回。护理计划让修好的东西一直是对的。仅向审计客户开放；一切从审计开始。">Facts drift — hours change, menus rotate, reviews pile up. Care plans keep what we fixed correct, month after month. Offered to audit clients only; everything starts with the audit.</p>
+  <h2 data-en="After the fix: monthly care" data-zh="修好之后：月度维护">After the fix: monthly care</h2>
+  <p class="hint" data-en="Facts go stale — hours change, menus rotate, reviews pile up. Care plans keep what we fixed correct, month after month. Offered to audit clients only; everything starts with the audit." data-zh="资料会走样——营业时间改了、菜单换了、评价堆着没人回。维护计划让修好的东西一直是对的。仅向完成体检的客户开放；一切从体检开始。">Facts go stale — hours change, menus rotate, reviews pile up. Care plans keep what we fixed correct, month after month. Offered to audit clients only; everything starts with the audit.</p>
   <div class="cards">
     <div class="card">
       <div class="k">watch</div>
@@ -247,12 +254,12 @@
     <div class="card">
       <div class="k">manage</div>
       <h3>AI Manage · S$149<span class="permo" data-en="/mo" data-zh="/月">/mo</span></h3>
-      <p data-en="Everything in Watch, plus every review answered within 7 days, 2 Google posts a month, and your info changes synced everywhere." data-zh="Watch 全部 + 每条评价 7 天内回复 + 每月 2 条 Google 动态 + 信息改动全网同步。">Everything in Watch, plus every review answered within 7 days, 2 Google posts a month, and your info changes synced everywhere.</p>
+      <p data-en="Everything in Watch, plus every review answered within 7 days, 2 Google posts a month, and info changes synced to your website, Google, Bing and the platforms we manage." data-zh="Watch 全部 + 每条评价 7 天内回复 + 每月 2 条 Google 动态 + 信息改动同步到官网、Google、Bing 及代管平台。">Everything in Watch, plus every review answered within 7 days, 2 Google posts a month, and info changes synced to your website, Google, Bing and the platforms we manage.</p>
     </div>
     <div class="card">
       <div class="k">concierge</div>
       <h3>AI Concierge · S$249<span class="permo" data-en="/mo" data-zh="/月">/mo</span></h3>
-      <p data-en="Everything in Manage, plus multilingual menu pages and a quarterly competitor re-audit." data-zh="Manage 全部 + 多语言菜单页 + 每季度竞对深度复审。">Everything in Manage, plus multilingual menu pages and a quarterly competitor re-audit.</p>
+      <p data-en="Everything in Manage, plus multilingual menu pages and a quarterly competitor re-audit." data-zh="Manage 全部 + 多语言菜单页 + 每季度竞争对手深度复审。">Everything in Manage, plus multilingual menu pages and a quarterly competitor re-audit.</p>
     </div>
   </div>
 </section>
@@ -260,9 +267,9 @@
 <section>
   <h2 data-en="How it works" data-zh="流程">How it works</h2>
   <ol class="steps">
-    <li data-en="Email us your business name." data-zh="把你的店名发邮件给我们。">Email us your business name.</li>
+    <li data-en="Email us your business name." data-zh="把店名电邮给我们。">Email us your business name.</li>
     <li data-en="Free 2-page check in your hands within 48 hours." data-zh="48 小时内收到免费 2 页体检报告。">Free 2-page check in your hands within 48 hours.</li>
-    <li data-en="You decide. No obligation, no chasing." data-zh="你自己决定。不强推，不追销。">You decide. No obligation, no chasing.</li>
+    <li data-en="You decide. No obligation, no chasing." data-zh="你自己决定。不强推，也不会追着你推销。">You decide. No obligation, no chasing.</li>
   </ol>
 </section>
 
@@ -300,13 +307,23 @@
     <p data-en="We started in F&B because that's the industry we come from. The method works for any local business — clinics, gyms, salons, studios."
        data-zh="我们从餐饮起步，因为这是我们最懂的行业。方法本身适用于任何本地生意——诊所、健身房、美容院、工作室。">We started in F&B because that's the industry we come from. The method works for any local business — clinics, gyms, salons, studios.</p>
   </details>
+  <details>
+    <summary data-en="How do I pay?" data-zh="怎么付款？">How do I pay?</summary>
+    <p data-en="PayNow or bank transfer, against an itemised invoice. For the audit, you pay only after the report is in your hands."
+       data-zh="PayNow 或银行转账，凭列明项目的账单付款。体检报告先到你手上，你才付款。">PayNow or bank transfer, against an itemised invoice. For the audit, you pay only after the report is in your hands.</p>
+  </details>
+  <details>
+    <summary data-en="What if I'm not happy with the work?" data-zh="做得不满意怎么办？">What if I'm not happy with the work?</summary>
+    <p data-en="Every fix we make is re-tested 30–60 days later with screenshots. If a fact we corrected goes wrong again within that window, we fix it again at no charge. Websites include two revision rounds."
+       data-zh="每一项修复都会在 30–60 天后截图重测。窗口期内我们修正过的事实若再出错，免费再修。官网含两轮修改。">Every fix we make is re-tested 30–60 days later with screenshots. If a fact we corrected goes wrong again within that window, we fix it again at no charge. Websites include two revision rounds.</p>
+  </details>
 </section>
 
 <section class="freecheck" id="free-check">
   <h2 data-en="Find out what AI says about you" data-zh="看看 AI 现在怎么说你的店">Find out what AI says about you</h2>
   <p class="sub" data-en="Free 2-page report. No signup, no obligation." data-zh="免费 2 页报告。无需注册，无任何义务。">Free 2-page report. No signup, no obligation.</p>
-  <!-- WhatsApp CTA removed for launch (Ernest, 16 Aug) — restore with wa.me link once the business number exists. hello@showsup.sg needs email forwarding set up in the Exabytes panel. -->
-  <a class="cta" href="mailto:hello@showsup.sg?subject=Free%20AI%20check&body=Hi%20showsup%2C%20my%20business%20is%20" data-en="Email us your business name" data-zh="把店名发邮件给我们">Email us your business name</a>
+  <a class="cta" id="cta-mail" href="mailto:hello@showsup.sg?subject=Free%20AI%20check&body=Hi%20showsup%2C%20my%20business%20is%20" data-en="Email us your business name" data-zh="把店名电邮给我们">Email us your business name</a>
+  <p class="sub" style="margin-top:14px"><span data-en="Or write directly: " data-zh="或直接写信：">Or write directly: </span><strong>hello@showsup.sg</strong></p>
 </section>
 
 <footer>
