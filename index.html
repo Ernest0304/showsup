@@ -23,8 +23,8 @@
   "makesOffer": [
     { "@type": "Offer", "name": "Free AI Check", "price": "0", "priceCurrency": "SGD", "description": "A free 2-page mini report showing how AI assistants currently describe your business, with real screenshots." },
     { "@type": "Offer", "name": "AI Visibility Audit", "price": "300", "priceCurrency": "SGD", "description": "15 live questions across 3 AI assistants, a five-area deep check, and a prioritised fix list." },
-    { "@type": "Offer", "name": "Audit + Fixes", "price": "500", "priceCurrency": "SGD", "description": "The full audit plus hands-on fixes: Google Business Profile, website structured data, menus, and listings. SGD 500-800." },
-    { "@type": "Offer", "name": "Complete Package", "price": "780", "priceCurrency": "SGD", "description": "Audit, fixes, and a one-page website. SGD 780-1,280." }
+    { "@type": "Offer", "name": "Audit + Fixes", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "500", "maxPrice": "800", "priceCurrency": "SGD" }, "description": "The full audit plus hands-on fixes: Google Business Profile, website structured data, menus, and listings. SGD 500-800." },
+    { "@type": "Offer", "name": "Complete Package", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "780", "maxPrice": "1280", "priceCurrency": "SGD" }, "description": "Audit, fixes, and a one-page website. SGD 780-1,280." }
   ]
 }
 </script>
@@ -102,7 +102,7 @@
       "name": "What if I'm not happy with the work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Every fix we make is re-tested 30–60 days later with screenshots. If a fact we corrected goes wrong again within that window, we fix it again at no charge. Websites include two revision rounds."
+        "text": "Every fix we make is re-tested 30–60 days later with screenshots. If a fact we corrected goes wrong again within that window, we work on it again at no charge. Websites include two revision rounds."
       }
     }
   ]
@@ -243,13 +243,13 @@
     <div class="label" data-en="Real answer from an AI assistant · August 2026 · shop name withheld" data-zh="AI 助手的真实回答 · 2026 年 8 月 · 店名已隐藏">Real answer from an AI assistant · August 2026 · shop name withheld</div>
     <div class="bubble q" data-en="Where is ___ and what are the opening hours?" data-zh="___ 在哪里？几点开到几点？">Where is ___ and what are the opening hours?</div>
     <div class="bubble a">
-      <span data-en="___ is at 136 ___ North Ave 3 … Opening hours are 9:00 AM–7:00 PM daily." data-zh="___ 位于 136 ___ North Ave 3……营业时间为每天 9:00–19:00。">___ is at 136 ___ North Ave 3 … Opening hours are 9:00 AM–7:00 PM daily.</span>
-      <span class="stamp" data-en="CLOSED SINCE AUG 2025" data-zh="2025 年 8 月已结业">CLOSED SINCE AUG 2025</span>
+      <span data-en="___ is at ___ Ave 3 … Opening hours are 9:00 AM–7:00 PM daily." data-zh="___ 位于 ___ Ave 3……营业时间为每天 9:00–19:00。">___ is at ___ Ave 3 … Opening hours are 9:00 AM–7:00 PM daily.</span>
+      <span class="stamp" data-en="OUTLET CLOSED — MOVED 2025" data-zh="该店已搬迁 · 旧址 2025 年结束营业">OUTLET CLOSED — MOVED 2025</span>
     </div>
   </div>
   <p class="caseline"
-     data-en="A Singapore specialty cafe moved to the CBD in 2025. A year later, AI assistants still send customers to its closed outlet — with the old opening hours. Nobody had told the owner, because nobody checks."
-     data-zh="一家新加坡精品咖啡馆 2025 年搬到了 CBD。一年后，AI 还在把顾客送去已经关门的旧店——连营业时间都是旧的。没有人告诉店主，因为没有人会去查。">A Singapore specialty cafe moved to the CBD in 2025. A year later, AI assistants still send customers to its closed outlet — with the old opening hours. Nobody had told the owner, because nobody checks.</p>
+     data-en="A Singapore specialty cafe moved to the CBD in 2025. A year later, AI assistants still send customers to the outlet it moved out of — with the old opening hours. The shop is open and trading at its new address; nobody had told the owner, because nobody checks."
+     data-zh="一家新加坡精品咖啡馆 2025 年搬到了 CBD。一年后，AI 还在把顾客送去它已经搬离的旧址——连营业时间都是旧的。店照常在新址营业，只是没有人告诉店主，因为没有人会去查。">A Singapore specialty cafe moved to the CBD in 2025. A year later, AI assistants still send customers to the outlet it moved out of — with the old opening hours. The shop is open and trading at its new address; nobody had told the owner, because nobody checks.</p>
 </section>
 
 <section id="services">
@@ -258,7 +258,7 @@
     <div class="card pillar">
       <div class="k" data-en="business 1" data-zh="业务一">business 1</div>
       <h3 data-en="AI &amp; Google visibility" data-zh="AI 和 Google 怎么讲你的店">AI &amp; Google visibility</h3>
-      <p data-en="We test what ChatGPT, Google AI and Perplexity actually say about your shop, fix every listing they read — Google Business Profile, maps, platforms, menus — and keep it correct month after month. Works with any website, including Shopify and Wix." data-zh="实测 ChatGPT、Google AI、Perplexity 现在怎么讲你的店，把它们读的资料全部修对——Google 商家档案、地图、各平台、菜单——然后每个月帮你盯着。不管你的网站是 Shopify 还是别人建的，都用得上。">We test what ChatGPT, Google AI and Perplexity actually say about your shop, fix every listing they read — Google Business Profile, maps, platforms, menus — and keep it correct month after month. Works with any website, including Shopify and Wix.</p>
+      <p data-en="We test what ChatGPT, Google AI and Perplexity actually say about your shop, fix the listings you control — Google Business Profile, maps, platforms, menus — and keep it correct month after month. Works with any website, including Shopify and Wix." data-zh="实测 ChatGPT、Google AI、Perplexity 现在怎么讲你的店，把你能控制的资料修对——Google 商家档案、地图、各平台、菜单——然后每个月帮你盯着。不管你的网站是 Shopify 还是别人建的，都用得上。">We test what ChatGPT, Google AI and Perplexity actually say about your shop, fix the listings you control — Google Business Profile, maps, platforms, menus — and keep it correct month after month. Works with any website, including Shopify and Wix.</p>
       <a class="demo-link" href="#pricing" data-en="See pricing →" data-zh="看价格 →">See pricing →</a>
     </div>
     <div class="card pillar">
@@ -272,7 +272,7 @@
     <div class="card">
       <div class="k" data-en="and also" data-zh="还能做">and also</div>
       <h3 data-en="Custom tools &amp; mini-apps" data-zh="定制小工具">Custom tools &amp; mini-apps</h3>
-      <p data-en="Small internal tools that save your team hours — daily sales dashboards, shift handover boards, simple booking and stock trackers. Built around how your shop actually runs. Quoted per project." data-zh="帮店里省时间的小工具——每日营业额一览表、交接班记录、简单的预约和库存登记。按你店里的实际流程来做，按项目报价。">Small internal tools that save your team hours — daily sales dashboards, shift handover boards, simple booking and stock trackers. Built around how your shop actually runs. Quoted per project.</p>
+      <p data-en="Small internal tools that save your team hours — daily sales dashboards, simple booking sheets and stock trackers. Built around how your shop actually runs. Quoted per project." data-zh="帮店里省时间的小工具——每日营业额一览表、简单的预约和库存登记。按你店里的实际流程来做，按项目报价。">Small internal tools that save your team hours — daily sales dashboards, simple booking sheets and stock trackers. Built around how your shop actually runs. Quoted per project.</p>
     </div>
   </div>
 </section>
@@ -323,7 +323,7 @@
     <tr>
       <td data-en="Complete Package" data-zh="全包">Complete Package</td>
       <td class="price">SGD 780–1,280</td>
-      <td data-en="Everything above, plus a one-page website we design and build for you — menu, opening hours, map and WhatsApp button, beautiful on every phone, fully readable by AI, first 12 months of hosting included, two revision rounds" data-zh="以上全部 + 帮你设计、建好的一页式官网——菜单、营业时间、地图、WhatsApp 按钮，手机上好看、AI 读得懂、含头 12 个月网站托管、含两轮修改">Everything above, plus a one-page website we design and build for you — menu, opening hours, map and WhatsApp button, beautiful on every phone, fully readable by AI, first 12 months of hosting included, two revision rounds</td>
+      <td data-en="Everything above, plus a one-page website we design and build for you — menu, opening hours, map and WhatsApp button, beautiful on every phone, built so AI can read it, first 12 months of hosting included, two revision rounds" data-zh="以上全部 + 帮你设计、建好的一页式官网——菜单、营业时间、地图、WhatsApp 按钮，手机上好看、AI 读得懂的结构、含头 12 个月网站托管、含两轮修改">Everything above, plus a one-page website we design and build for you — menu, opening hours, map and WhatsApp button, beautiful on every phone, built so AI can read it, first 12 months of hosting included, two revision rounds</td>
     </tr>
   </table>
   <p class="note" data-en="Every paid tier includes a before-and-after re-test 30–60 days later. Where a range is shown, the exact price depends on your number of outlets and platforms to fix — fixed in writing before we start. Custom tools are quoted per project." data-zh="所有付费配套都含 30–60 天后的前后对比重测。价钱有个范围，看你有几间店、要修几个平台——开工前白纸黑字定死，不中途加价。定制小工具按项目报价。">Every paid tier includes a before-and-after re-test 30–60 days later. Where a range is shown, the exact price depends on your number of outlets and platforms to fix — fixed in writing before we start.</p>
@@ -356,14 +356,15 @@
   <h2 data-en="How it works" data-zh="流程">How it works</h2>
   <ol class="steps">
     <li data-en="Email us your business name." data-zh="把店名电邮给我们。">Email us your business name.</li>
-    <li data-en="Free 2-page check in your hands within 48 hours." data-zh="48 小时内收到免费 2 页检查报告。">Free 2-page check in your hands within 48 hours.</li>
+    <li data-en="Free 2-page check in your hands within 3 working days." data-zh="3 个工作日内收到免费 2 页检查报告。">Free 2-page check in your hands within 3 working days.</li>
     <li data-en="You decide. No obligation, no chasing." data-zh="你自己决定。不硬卖，也不会追着你推销。">You decide. No obligation, no chasing.</li>
   </ol>
 </section>
 
 <section>
   <div class="honesty">
-    <p><span class="em" data-en="Nobody can guarantee a spot in AI's “best of” lists" data-zh="没有人能保证你上 AI 的“最佳推荐”名单">Nobody can guarantee a spot in AI's “best of” lists</span><span data-en=" — anyone who promises that is lying to you. We fix what AI reads, and we prove it with a before-and-after re-test 30–60 days later." data-zh="——谁跟你保证，谁就是在骗你。我们修好 AI 读的资料，再用 30–60 天后的前后对比重测证明给你看。"> — anyone who promises that is lying to you. We fix what AI reads, and we prove it with a before-and-after re-test 30–60 days later.</span></p>
+    <p><span class="em" data-en="Nobody can guarantee a spot in AI's “best of” lists" data-zh="没有人能保证你上 AI 的“最佳推荐”名单">Nobody can guarantee a spot in AI's “best of” lists</span><span data-en=" — anyone who promises that is lying to you. We fix what AI reads, and we re-test 30–60 days later and show you exactly what changed." data-zh="——谁跟你保证，谁就是在骗你。我们修好 AI 读的资料，再在 30–60 天后重测，把变化逐条给你看。"> — anyone who promises that is lying to you. We fix what AI reads, and we re-test 30–60 days later and show you exactly what changed.</span></p>
+    <p><span class="em" data-en="And we tell you what we cannot fix." data-zh="我们也会告诉你哪些是我们修不了的。">And we tell you what we cannot fix.</span><span data-en=" Every problem we find is graded: what you control (we fix it), what a third-party site controls (we can only request the correction), and what nothing can reach today. You see the grade before you pay." data-zh="每一个问题我们都会分级：你能控制的（我们修）、第三方网站控制的（我们只能提交更正申请）、以及目前谁也够不着的。付钱之前你就看得到分级。"> Every problem we find is graded: what you control (we fix it), what a third-party site controls (we can only request the correction), and what nothing can reach today. You see the grade before you pay.</span></p>
     <p><span class="em" data-en="And we never ask for your passwords." data-zh="我们也永远不会要你的密码。">And we never ask for your passwords.</span><span data-en=" Every platform has an invite function; you can revoke our access anytime." data-zh="每个平台都有邀请管理员的功能，你随时可以把我们移除。"> Every platform has an invite function; you can revoke our access anytime.</span></p>
   </div>
 </section>
@@ -412,8 +413,8 @@
   </details>
   <details>
     <summary data-en="What if I'm not happy with the work?" data-zh="做得不满意怎么办？">What if I'm not happy with the work?</summary>
-    <p data-en="Every fix we make is re-tested 30–60 days later with screenshots. If a fact we corrected goes wrong again within that window, we fix it again at no charge. Websites include two revision rounds."
-       data-zh="每一项修复都会在 30–60 天后截图重测。这段期间，我们修好的资料要是再出错，免费再修。官网含两轮修改。">Every fix we make is re-tested 30–60 days later with screenshots. If a fact we corrected goes wrong again within that window, we fix it again at no charge. Websites include two revision rounds.</p>
+    <p data-en="Every fix we make is re-tested 30–60 days later with screenshots. If a fact we corrected goes wrong again within that window, we work on it again at no charge. Websites include two revision rounds."
+       data-zh="每一项修复都会在 30–60 天后截图重测。这段期间，我们修好的资料要是再出错，免费再跟进处理。官网含两轮修改。">Every fix we make is re-tested 30–60 days later with screenshots. If a fact we corrected goes wrong again within that window, we work on it again at no charge. Websites include two revision rounds.</p>
   </details>
 </section>
 
